@@ -1,0 +1,8 @@
+https://medium.com/react-native-training/explanation-of-react-native-navigation-wix-with-redux-deabcee8edfc
+
+https://github.com/keri4141/React-Native-Navigation-Redux-Example
+
+
+https://medium.com/handlebar-labs/getting-started-with-react-native-navigation-v1-7a16afdeadcd
+
+https://github.com/spencercarli/getting-started-react-native-navigation
