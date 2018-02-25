@@ -10,13 +10,11 @@ const initialState = Immutable({
 export function root(state = initialState, action = {}) {
 
   switch (action.type) {
- 
+    
     case types.ROOT_CHANGED:
-    console.log("state",state)
-    return {...state,root : action.root}
-      /*return state.merge({
+      return state.merge({
         root: action.root
-      });*/
+      });
 
     default:
       return state;

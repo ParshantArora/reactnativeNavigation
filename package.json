@@ -12,6 +12,7 @@
     "react-native-navigation": "^1.1.386",
     "react-redux": "^5.0.7",
     "redux": "^3.7.2",
+    "redux-persist": "^5.9.1",
     "redux-thunk": "^2.2.0",
     "seamless-immutable": "^7.1.3"
   },

@@ -10,24 +10,10 @@ import registerScreens from './components/screens/screens.js';
 import * as reducers from "./reducers/index";
 import * as appActions from "./actions/index";
 import thunk from "redux-thunk";
-import { persistStore, persistCombineReducers } from 'redux-persist'
-import storage from 'redux-persist/es/storage'   
-const config = {
-  key: 'root',
-  storage,
-}
-
 const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
-//const reducer = combineReducers(reducers);
-const reducer = persistCombineReducers(config, reducers)
+const reducer = combineReducers(reducers);
 const store = createStoreWithMiddleware(reducer);
-
 registerScreens(store, Provider);
-
-persistStore(store, null, () => {
-console.log("store")
-//registerScreens(store, Provider);
-});
 
 export default class  App extends Component {
 
@@ -39,7 +25,7 @@ export default class  App extends Component {
  
   onStoreUpdate() {
       let {root} = store.getState().root;
-     console.log("store",store.getState())
+     
       // handle a root change
       // if your app doesn't change roots in runtime, you can remove onStoreUpdate() altogether
       if (this.currentRoot != root) {
